@@ -1,0 +1,38 @@
+form[name="contact-us"] {
+  width: 100%;
+  background-color: var(--color-bg);
+
+  
+  padding: 93px 32px;
+
+
+  .form-textarea-wrapper {
+    label.error {
+      bottom: -30px;
+    }
+  }
+  .form-actions {
+    margin-top: 32px;
+    .button {
+      width: 100%;
+      border-radius: 0%;
+      background: linear-gradient(135deg, #4995D1 0%, #92D2ED 100%);
+      color: var(--color-white);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px; /* 150% */ 
+    }
+  }
+  .form-field:nth-child(1),
+  .form-field:nth-child(2) {
+    width: calc(50% - 3px);
+    /* Adjust width based on your design */
+    display: inline-block;
+    @include desktop-small {
+      width: 100%;
+      display: block;
+    }
+  }
+}

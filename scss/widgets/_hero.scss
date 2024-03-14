@@ -1,0 +1,218 @@
+.hero {
+  display: flex;
+  // padding: 0rem 0rem 2.5rem 0rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  // background: url(../../images/bg.png), 50% / cover no-repeat;
+  background-size: cover;
+  background-color: var(--color-secondary);
+  height: fit-content;
+  color: var(--color-white);
+
+  @include mobile {
+    display: block;
+  }
+
+  @include desktop-small {
+    height: auto;
+    margin-top: -10px;
+    padding: 24px 0px;
+
+    .hidden-on-sm {
+      display: none;
+    }
+  }
+  @include desktop-small {
+    padding-top: $header-gap;
+  }
+  h1 {
+    @include desktop-small {
+      text-align: center;
+    }
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  &.medium {
+    height: 33.4375rem;
+
+    @include desktop-small {
+      height: auto;
+    }
+  }
+
+  .text_image_center {
+    flex-direction: column;
+    gap: 2rem !important;
+    flex-basis: 70%;
+    text-align: center;
+  }
+
+  .text_left__image_right {
+
+  }
+
+  .text_right__image_left {
+    flex-direction: row-reverse;
+  }
+
+  .hero-container {
+    display: flex;
+    padding: 0 0rem;
+    justify-content: center;
+    gap: 4rem;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0rem;
+      padding-bottom: 1rem;
+    }
+
+    @include desktop-small {
+      flex-direction: column;
+      // padding: 0 1rem;
+      align-items: flex-start;
+      padding: 0rem;
+      padding-bottom: 1rem;
+
+
+    }
+
+    .hero_text_center{
+      align-items: center;
+
+      @include desktop-small {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .hero_text_left{
+      align-items: flex-start;
+      flex: 1 0 49% !important;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding-left: 5rem;
+
+      @include desktop-small {
+        text-align: center;
+        align-items: center;
+        padding-left: 0rem;
+        width: 100%;
+        // padding: 70px 20px;
+        gap: 0.5rem;
+        .button {
+          margin: 0 auto;
+          
+        }
+      }
+      .button{
+        align-self: flex-start;
+      }
+      gap: 1.5rem;
+      flex: 1 0 60%;
+
+      h2 {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        
+
+      }
+
+      h1 {
+        font-family: Inter;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+        @include desktop-small {
+          align-items: center;
+          color: var(--Design-3-white, #FFF);
+          text-align: center;
+
+          /* Display lg/Bold */
+          font-family: Inter;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 60px; /* 125% */
+          letter-spacing: -0.96px;
+        }
+      }
+
+      p {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        
+
+        @include desktop-small {
+          text-align: center;
+          margin: 16px;
+        }
+      }
+
+      .hidden-on-lg {
+        display: none;
+        width: 100%;
+
+        @include desktop-small {
+          display: flex;
+          width: 100%;
+          justify-content: end;
+        }
+      }
+    }
+
+    .hero-image {
+      flex: 1 0 40%;
+      width: 100%;
+      height: 100%;
+      justify-content: end;
+      
+  
+
+      @include desktop-small {
+        // order: 1;
+        width: 100%;        
+      }
+      margin: 0rem;
+
+      
+
+      img {
+        width: 100%;
+        
+        @include desktop-small {
+          max-width: 386px;
+          margin: 24px 0px;
+        }
+      }
+    }
+  }
+}
